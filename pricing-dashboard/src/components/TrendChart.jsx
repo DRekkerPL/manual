@@ -22,11 +22,11 @@ export default function TrendChart({ data }) {
   }))
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
-      <h2 className="text-base font-semibold text-slate-700 mb-4">
-        Share of order lines with a manual price change
+    <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-5 h-full">
+      <h2 className="text-sm font-semibold text-slate-700 mb-4">
+        Manual % trend (last 24 months)
       </h2>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={260}>
         <LineChart data={chartData} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis

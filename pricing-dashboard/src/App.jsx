@@ -19,7 +19,7 @@ function App() {
     setLoading(true)
     setError(null)
     try {
-      const [baselineText, categoriesText] = await Promise.all([
+      const [baselineText, categoriesText, customersText, salespersonsText] = await Promise.all([
         fetch(`/analysis/${cc}/baseline_metrics.csv`).then(r => {
           if (!r.ok) throw new Error(`Failed to load baseline_metrics.csv`)
           return r.text()
@@ -28,10 +28,20 @@ function App() {
           if (!r.ok) throw new Error(`Failed to load category_breakdown.csv`)
           return r.text()
         }),
+        fetch(`/analysis/${cc}/customer_ranking_by_category.csv`).then(r => {
+          if (!r.ok) throw new Error(`Failed to load customer_ranking_by_category.csv`)
+          return r.text()
+        }),
+        fetch(`/analysis/${cc}/salesperson_detail.csv`).then(r => {
+          if (!r.ok) throw new Error(`Failed to load salesperson_detail.csv`)
+          return r.text()
+        }),
       ])
       setData({
         baseline: parseCsv(baselineText),
         categories: parseCsv(categoriesText),
+        customers: parseCsv(customersText),
+        salespersons: parseCsv(salespersonsText),
       })
     } catch (e) {
       setError(e.message)
@@ -46,7 +56,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Header */}
       <header className="bg-[#1B3A6B] text-white px-6 py-4 shadow-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div>
@@ -69,7 +78,6 @@ function App() {
         </div>
       </header>
 
-      {/* Content */}
       <main className="max-w-7xl mx-auto px-6 py-6">
         {loading && (
           <div className="flex items-center justify-center py-20">

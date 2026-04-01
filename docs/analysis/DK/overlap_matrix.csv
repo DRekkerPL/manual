@@ -1,0 +1,7 @@
+CategoryA,LabelA,CategoryB,LabelB,OverlapCount
+MPA_MatchingPreviousSale,Matching Previous Sale,MPA_CustomerAgreement,Local Profile,1106
+MPA_UnitFixedPrice,Fixed / Unit Price,MPA_CustomerAgreement,Local Profile,491
+MPA_StaleQuote,Stale Quote,MPA_CustomerAgreement,Local Profile,257
+MPA_MatchingPreviousSale,Matching Previous Sale,MPA_UnitFixedPrice,Fixed / Unit Price,210
+MPA_MatchingPreviousSale,Matching Previous Sale,MPA_StaleQuote,Stale Quote,48
+MPA_StaleQuote,Stale Quote,MPA_UnitFixedPrice,Fixed / Unit Price,10
