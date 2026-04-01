@@ -1,4 +1,4 @@
 [build]
   base = "pricing-dashboard/"
   command = "npm install && npm run build"
-  publish = "pricing-dashboard/dist/"
+  publish = "dist/"
