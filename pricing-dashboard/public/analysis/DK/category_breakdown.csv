@@ -1,0 +1,6 @@
+BusinessUnit,OrderLines,DiscountEUR,TurnoverEUR,CategoryCode,CategoryLabel,Type,TotalLines,PctOfTotal
+DK,7205,1619679.5370446905,6740179.575407876,PA2_Manually,Manual Price Change,Manual,373902,1.93
+DK,3960,1423967.3008125292,7496535.127463016,MPA_MatchingPreviousSale,Matching Previous Sale,Manual,373902,1.06
+DK,750,655186.8840915858,2038865.480748515,MPA_StaleQuote,Stale Quote,Manual,373902,0.2
+DK,1909,427580.61926277896,2182721.0890552606,MPA_UnitFixedPrice,Fixed / Unit Price,Manual,373902,0.51
+DK,4900,1504522.4548306868,7460924.637103292,MPA_CustomerAgreement,Local Profile,Manual,373902,1.31
